@@ -1,0 +1,15 @@
+commands:
+  bootFromCdOnce: "scripts/testing/bootfromcdonce.sh"
+  mountCd: "scripts/testing/mountcd.sh"
+  powerOff: "scripts/testing/poweroff.sh"
+  powerOn: "scripts/testing/poweron.sh"
+  unmountCd: "scripts/testing/unmountcd.sh"
+
+server:
+  port: 8080
+
+tls:
+  enabled: false
+  caCert: "tls/ca.crt"
+  clientCert: "tls/client.crt"
+  clientKey: "tls/client"
