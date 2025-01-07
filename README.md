@@ -1,15 +1,19 @@
 # Fakefish (Golang)
 
-Why recreate this project? The purpose is really a redraft of the already existing (and kind of amazing) [Metal3/Fakefish](https://github.com/openshift-metal3/fakefish) project, which was originally written/proposed by [Mario Vázquez](https://github.com/mvazquezc). But the original is limited for embedded systems, and I need a binary version of Fakefish for things like the new [JetKVM](https://jetkvm.com/). 
+The purpose of this repository is propose a redraft of an already existing (and kind of amazing) [Metal3/Fakefish](https://github.com/openshift-metal3/fakefish) project. I believe that `fakefish` was originally written/proposed by [Mario Vázquez](https://github.com/mvazquezc). So why suggest a conversion to Golang? The original implementation using python is great, but it could be limited for embedded systems that don't include python. This compiled version of `fakefish` allows for easy deployment on embedded devices such as the new [JetKVM](https://jetkvm.com/), for example.
 
-For the JetKVM, once you go into "Developer Mode", you can upload the binary and a collection of scripts that can be used to load/unload ISOs and control the host via Redfish. That's my goal anyway, and I've already rreached out to some folks on the team to get their thoughts (over at JetKVM).
+If you enable "Developer Mode" on the JetKVM, you could potentially upload this precompiled binary along with any nessesary scripts that can be used to load/unload ISOs and control the host via Redfish. This is my initial goal/proposal anyway. I've already created a [proposal](https://github.com/jetkvm/kvm/issues/36) with the JetKVM team, and have reached out to some folks to get their thoughts as well (through Discord and Email).
 
-Once this project is a bit more ironed out, I will permanently migrate it to GitHub and propose it to the Metal3 team for further maintenance.
+Once this project is a bit more ironed out, my intent would be to permanently migrate it to the [Metal3 organization](https://github.com/openshift-metal3/) for future maintenance.
 
 ## Build
 
-Until I create a Makefile (my next objective), you can create a binary by running the following command:
+Until I create a Makefile (my next objective) and start implementing gates/CI for the project, you can create a binary by running the following command:
 
 ```bash
 go build -o fakefish ./cmd/fakefish
 ```
+
+## Contributing
+
+As the project matures, I will add more information on how to contribute and include a Code of Conduct. For now, feel free to open an issue or PR if you have any suggestions or feedback.
